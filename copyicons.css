@@ -1,0 +1,73 @@
+/**
+  Bootstrap icons for PmWiki
+  Written by (c) Petko Yotov 2023-2024   www.pmwiki.org/Petko
+  License: MIT, see file LICENSE
+  
+  This sets styles for the (:biconlist:) listings.
+
+*/
+
+
+ul.biconlist {
+  list-style-type: none; 
+  font-size: .8em;
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 10em;
+  overflow-y: auto; 
+  padding: 0;
+  margin-top: .4em;
+  line-height: 1.5;
+  justify-content: space-between;
+}
+
+.biconlist li {
+  flex: 0 0 15em;
+  margin: 0;
+  position:relative;
+  padding-left: .2em;
+}
+
+.biconlist li:hover {
+  cursor: pointer;
+  background-color: #ff8;
+}
+
+.biconlist li.copied {
+  background-color: #afa;
+}
+
+.biconlist li:before {
+  content:"";
+  display: block;
+  position: absolute;
+  font-size: .7em;
+  line-height: 1;
+  top:0;
+  right: 0;
+  color: #080;
+}
+
+.biconlist li:hover:before {
+  content:"click to copy";
+}
+
+.biconlist li.copied:before,
+.biconlist li:hover.copied:before {
+  content:"\2714";
+  font-size: 2em;
+}
+
+html.pmDarkTheme {
+  .biconlist li:hover {
+    background-color: #282900;
+  }
+
+  .biconlist li.copied {
+    background-color: #004c02;
+  }
+
+  .biconlist li:before {
+    color: #5bc548;
+  }
+}
