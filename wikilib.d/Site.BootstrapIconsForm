@@ -1,5 +1,5 @@
 version=pmwiki-2.3.30 ordered=1 urlencoded=1
 author=Petko
 charset=UTF-8
-text=>>frame%3c%3c%0a$[Summary]: Icon font for PmWiki\\%0a$[Version]: {$xVersion}\\%0a$[Maintainer]: [[https://www.pmwiki.org/petko|Petko]]\\%0a$[Cookbook]: [[(Cookbook:)BootstrapIcons]]%0a>>%3c%3c%0a[[#form]]%0a[[#formend]]%0a%0a!! Find icons%0a%0aHere you can find icons and copy them to clipboard.%0a%0a(:if ! enabled EnableBootstrapIcons:)%0aEnable the extension to activate the list.%0a(:else:)%0a(:biconlist:)%0a(:if:)
-time=1708325272
+text=>>frame%3c%3c%0a$[Summary]: Icon font for PmWiki\\%0a$[Version]: {$ExtVersion}\\%0a$[Maintainer]: [[https://www.pmwiki.org/petko|Petko]]\\%0a$[Cookbook]: [[(Cookbook:)BootstrapIcons]]%0a>>%3c%3c%0a[[#form]]%0a[[#formend]]%0a%0a!! Find icons%0a%0aHere you can find icons and copy them to clipboard.%0a%0a(:if ! enabled EnableBootstrapIcons:)%0aEnable the extension to activate the list.%0a(:else:)%0a(:biconlist:)%0a(:if:)
+time=1708417879

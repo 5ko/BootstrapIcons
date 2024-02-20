@@ -10,7 +10,7 @@
     https://github.com/twbs/icons/releases/
 */
 
-$RecipeInfo['BootstrapIcons']['Version'] = '2024-02-19';
+$RecipeInfo['BootstrapIcons']['Version'] = '2024-02-20';
 
 $EnableBootstrapIcons = 1;
 
