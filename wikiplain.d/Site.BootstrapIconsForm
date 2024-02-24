@@ -1,0 +1,18 @@
+>>frame<<
+$[Summary]: Icon font for PmWiki\\
+$[Version]: {$ExtVersion}\\
+$[Maintainer]: [[https://www.pmwiki.org/petko|Petko]]\\
+$[Cookbook]: [[(Cookbook:)BootstrapIcons]]
+>><<
+[[#form]]
+[[#formend]]
+
+!! Find icons
+
+Here you can find icons and copy them to clipboard.
+
+(:if ! enabled EnableBootstrapIcons:)
+Enable the extension to activate the list.
+(:else:)
+(:biconlist:)
+(:if:)
