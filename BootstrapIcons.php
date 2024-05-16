@@ -10,17 +10,21 @@
     https://github.com/twbs/icons/releases/
 */
 
-$RecipeInfo['BootstrapIcons']['Version'] = '2024-02-24';
+$RecipeInfo['BootstrapIcons']['Version'] = '2024-05-16';
 
+# used in the hub configuration form
 $EnableBootstrapIcons = 1;
 
-extAddResource('bi/bootstrap-icons.min.css');
-
 # custom tilde shortcut
-Markup('bicons', 'inline', '/~((bi)-[0-9a-z-]+)/', '<i class="$2 $1"></i>');
+Markup('bicons', 'inline', '/~((bi)-[0-9a-z-]+)/', 'FmtBiconInline');
 
 $MarkupDirectiveFunctions['biconlist'] = "FmtBiconList";
 
+function FmtBiconInline($m) {
+  static $seen = 0;
+  if(!$seen++) extAddResource('bi/bootstrap-icons.min.css');
+  return "<i class='{$m[2]} {$m[1]}'></i>";
+}
 
 function FmtBiconList($pagename='', $d='', $args=[]) {
   static $injected = 0, $list = [];
@@ -45,9 +49,8 @@ function FmtBiconList($pagename='', $d='', $args=[]) {
     $style = '';
   }
   
-  if($out && !$injected) {
+  if($out && !$injected++) {
     extAddResource('copyicons.css copyicons.js');
-    $injected++;
   }
   return PRR($out);
 }
