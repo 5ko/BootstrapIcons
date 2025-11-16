@@ -1,7 +1,7 @@
 <?php if (!defined('PmWiki')) exit();
 /**
   Bootstrap icons extension for PmWiki
-  Written by (c) Petko Yotov 2023-2024   www.pmwiki.org/Petko
+  Written by (c) Petko Yotov 2023-2025   www.pmwiki.org/Petko
   License: MIT, see file LICENSE
   
   This extension loads the Bootstrap Icons free font.
@@ -10,7 +10,7 @@
     https://github.com/twbs/icons/releases/
 */
 
-$RecipeInfo['BootstrapIcons']['Version'] = '2024-05-16';
+$RecipeInfo['BootstrapIcons']['Version'] = '2025-11-16';
 
 # used in the hub configuration form
 $EnableBootstrapIcons = 1;
@@ -23,7 +23,7 @@ $MarkupDirectiveFunctions['biconlist'] = "FmtBiconList";
 function FmtBiconInline($m) {
   static $seen = 0;
   if(!$seen++) extAddResource('bi/bootstrap-icons.min.css');
-  return "<i class='{$m[2]} {$m[1]}'></i>";
+  return "<i class='{$m[2]} {$m[1]} kpTOC'></i>";
 }
 
 function FmtBiconList($pagename='', $d='', $args=[]) {
